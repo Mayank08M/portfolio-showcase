@@ -2,6 +2,9 @@ import Image from "next/image";
 import styles from "../../styles/page.module.css";
 import Navbar from "../../components/Navbar";
 import Man from '../../public/man.png'
+import Iphone from '../../public/iphone.jpg'
+import Discuss from '../../public/discuss.jpg'
+import Typing from '../../public/typing.jpg'
 import { RiComputerLine } from "react-icons/ri";
 import { AiOutlinePlayCircle } from "react-icons/ai"
 
@@ -134,6 +137,38 @@ export default function Home() {
   <textarea name="text" className={styles.feedbackinput} placeholder="Comment"></textarea>
   <input className={styles.submit} type="submit" value="SUBMIT"/>
 </form>
+          </div>
+        </div>
+      </section>
+      <section style={{background:"white"}}>
+        <div style={{padding:"2rem 4rem"}}>
+          <div style={{textAlign:"center"}}><p style={{color:"purple", fontWeight:"bold"}}>BLOGS</p></div>
+          <div style={{textAlign:"center"}}><p style={{fontSize:"2rem"}}>Latest Blogs</p></div>
+          <div style={{display:"flex", justifyContent:"center", margin:"1rem 10rem"}}>
+          <div className={styles.blogdiv}>
+            <div><Image src={Iphone} className={styles.cardimg}/></div>
+            <div style={{width:"100%", padding:"0.2rem 1rem", height:"50%"}}>
+              <div><p style={{fontWeight:"bold", marginBottom:"1rem", marginTop:"0.5rem"}}>Design your apps</p></div>
+              <div><p style={{marginBottom:"1rem", color:"rgb(167, 167, 167)"}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, blanditiis! mamama uudh jhdauhc kgdygh</p></div>
+              <div style={{marginBottom:"1rem", fontWeight:"bold", cursor:"pointer", color:"#CC4949"}}>Read more &#8594;</div>
+            </div>
+            </div>
+            <div className={styles.blogdiv}>
+            <div><Image src={Discuss} className={styles.cardimg}/></div>
+            <div style={{width:"100%", padding:"0.2rem 1rem", height:"50%"}}>
+              <div><p style={{fontWeight:"bold", marginBottom:"1rem", marginTop:"0.5rem"}}>Design your apps</p></div>
+              <div><p style={{marginBottom:"1rem", color:"rgb(167, 167, 167)"}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, blanditiis! mamama uudh jhdauhc kgdygh</p></div>
+              <div style={{marginBottom:"1rem", fontWeight:"bold", cursor:"pointer", color:"#CC4949"}}>Read more &#8594;</div>
+            </div>
+            </div>
+            <div className={styles.blogdiv}>
+            <div><Image src={Typing} className={styles.cardimg}/></div>
+            <div style={{width:"100%", padding:"0.2rem 1rem", height:"50%"}}>
+              <div><p style={{fontWeight:"bold", marginBottom:"1rem", marginTop:"0.5rem"}}>Design your apps</p></div>
+              <div><p style={{marginBottom:"1rem", color:"rgb(167, 167, 167)"}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, blanditiis! mamama uudh jhdauhc kgdygh</p></div>
+              <div style={{marginBottom:"1rem", fontWeight:"bold", cursor:"pointer", color:"#CC4949"}}>Read more &#8594;</div>
+            </div>
+            </div>
           </div>
         </div>
       </section>
