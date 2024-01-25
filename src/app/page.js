@@ -5,6 +5,9 @@ import Man from '../../public/man.png'
 import Iphone from '../../public/iphone.jpg'
 import Discuss from '../../public/discuss.jpg'
 import Typing from '../../public/typing.jpg'
+import { FaInstagram } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 import { RiComputerLine } from "react-icons/ri";
 import { AiOutlinePlayCircle } from "react-icons/ai"
 
@@ -24,7 +27,7 @@ export default function Home() {
         </div>
       </div>
       </div>
-      <div style={{position:"relative"}}>
+      <div className={styles.mainimg}>
         <Image src={Man} alt="man" height={500} />
         </div>
       </div>
@@ -34,14 +37,14 @@ export default function Home() {
       </div>
       </section>
       <section style={{background:"white"}}>
-        <div style={{display:"flex", justifyContent:"center", padding:"3rem 2rem"}}>
+        <div className={styles.aboutdiv}>
           <div style={{width:"35%"}}>
           <div className={styles.videodiv}>
             {/* <Image src={Man1} alt="my video" height="100%" width={300}/> */}
             <AiOutlinePlayCircle style={{position:"absolute", fontSize:"2rem", color:"white", top:"48%", left:"45%"}}/>
           </div>
           </div>
-          <div style={{width:"50%", marginLeft:"2rem"}}>
+          <div className={styles.abouttext}>
             <div><p style={{color:"purple", fontSize:"1rem", fontWeight:"bold"}}>ABOUT ME</p></div>
             <div style={{fontSize:"2rem", marginBottom:"1rem"}}>My name is <br/><p >Mayank Mishra</p></div>
             <div><p style={{color:"rgb(167, 167, 167)"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, numquam illum? Corporis iste explicabo aspernatur labore, reiciendis amet impedit aut expedita ducimus iusto maxime sapiente enim, a vel quia repellendus.</p></div>
@@ -63,7 +66,7 @@ export default function Home() {
       <section style={{background:"rgb(240, 240, 240)"}}>
         <div>
           <div style={{textAlign:"center", color:"purple", fontWeight:"bold", padding:"2rem 0 0.5rem 0"}}><p style={{marginBottom:"0"}}>EXPERIENCE & SERVICES</p></div>
-          <div style={{textAlign:"center", fontSize:"2rem"}}><p>I can provide you help in this fields.</p></div>
+          <div style={{textAlign:"center", fontSize:"1.5rem"}}><p>I can provide you help in this fields.</p></div>
           <div className={styles.griddiv}>
             <div className={styles.card}>
               <div style={{padding:"1rem", borderRadius:"10px", background:"rgb(220, 220, 255)", width:"18%", margin:"1rem", height:"4rem"}}>
@@ -123,7 +126,7 @@ export default function Home() {
         </div>
       </section>
       <section style={{background:"grey"}}>
-        <div style={{padding:"2rem 18rem", textAlign:"center"}}>
+        <div className={styles.formdiv}>
           <div><p style={{fontWeight:"bold", fontSize:"1.5rem", color:"white", marginBottom:"1rem"}}>You Can Contact Me</p></div>
           <div style={{background:"white", padding:"3rem 1rem"}}>
             <p style={{fontWeight:"bold", fontSize:"1.5rem", marginBottom:"1rem"}}>Get in touch</p>
@@ -144,7 +147,7 @@ export default function Home() {
         <div style={{padding:"2rem 4rem"}}>
           <div style={{textAlign:"center"}}><p style={{color:"purple", fontWeight:"bold"}}>BLOGS</p></div>
           <div style={{textAlign:"center"}}><p style={{fontSize:"2rem"}}>Latest Blogs</p></div>
-          <div style={{display:"flex", justifyContent:"center", margin:"1rem 10rem"}}>
+          <div className={styles.blogmaindiv}>
           <div className={styles.blogdiv}>
             <div><Image src={Iphone} className={styles.cardimg}/></div>
             <div style={{width:"100%", padding:"0.2rem 1rem", height:"50%"}}>
@@ -169,6 +172,17 @@ export default function Home() {
               <div style={{marginBottom:"1rem", fontWeight:"bold", cursor:"pointer", color:"#CC4949"}}>Read more &#8594;</div>
             </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section style={{background:"grey"}}>
+        <div className={styles.footerdiv}>
+          <div>Mayank Mishra</div>
+          <div className={styles.copyrights}>@2024 All copyrights are reserved<br/>Made by <strong>Mayank Mishra</strong></div>
+          <div style={{display:"flex", justifyContent:"center"}}>
+            <div><FaInstagram style={{fontSize:"1.5rem"}} className={styles.insta}/></div>
+            <div style={{marginLeft:"0.5rem", marginRight:"0.5rem"}}><FaGithub style={{fontSize:"1.5rem"}} className={styles.github}/></div>
+            <div><FaFacebookSquare style={{fontSize:"1.5rem"}} className={styles.facebook}/></div>
           </div>
         </div>
       </section>

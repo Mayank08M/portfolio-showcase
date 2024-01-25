@@ -41,8 +41,19 @@
   gap: 0.5rem;
   margin: 1rem 10rem 0 1rem;
 }
-
-
+.aboutdiv{
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+.abouttext{
+  width: 50%;
+  margin-left: 2rem;
+}
+.formdiv{
+  text-align: center;
+  padding: 2rem 18rem;
+}
 
 .feedbackinput {
   color:black;
@@ -85,6 +96,11 @@
   font-weight:700;
 }
 .submit:hover { background:#CC4949; }
+.blogmaindiv{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 10rem;
+}
 
 .blogdiv{
   border-radius: 10px;
@@ -92,14 +108,75 @@
   height: 26rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-
+.mainimg{
+  position: relative;
+}
 .cardimg{
   height: 50%;
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+.footerdiv{
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+.copyrights{
+  text-align: center;
+  margin: 0 2rem;
+}
+.insta:hover{
+  color: #CC4949;
+  cursor: pointer;
+}
+.github:hover{
+  color: green;
+  cursor: pointer;
+}
+.facebook:hover{
+  color: blue;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 900px) {
-  
+  .introd{
+    top: 38%;
+    right: 0%;
+  }
+  .mainimg{
+    margin-left: 14rem;
+  }
+  .aboutdiv{
+    display: block;
+  }
+  .videodiv{
+    display: none;
+  }
+  .abouttext{
+    width: 90%;
+    margin-left: 1rem;
+  }
+  .griddiv{
+    margin: 0;
+    display: block;
+  }
+  .formdiv{
+    padding: 2rem 2rem;
+  }
+  .blogmaindiv{
+    display: block;
+    margin: 0;
+  }
+  .blogdiv{
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .footerdiv{
+    display: block;
+    text-align: center;
+  }
+  .copyrights{
+    margin: 1rem 2rem;
+  }
 }
