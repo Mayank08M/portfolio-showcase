@@ -1,3 +1,9 @@
+.maindiv{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 6rem;
+  padding: 1rem;
+}
 .navitem{
   display: flex;
   justify-content: space-between;
@@ -9,7 +15,8 @@
   display: none;
 }
 .navitem li:hover{
-    color: blueviolet;
+    text-decoration: underline;
+    color: aliceblue;
 }
 .checkbox {
     opacity: 0;
