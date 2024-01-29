@@ -19,18 +19,22 @@
   background-color: var(--body_background);
   color: var(--body_color);
   font-family: 'Heebo', sans-serif;
+  position: relative;
 }
 .sec1{
   background-image: url("../public/background.jpg");
+  position: relative;
   /* height: 50%; */
 }
 .sec2{
   background-color: var(--body_background);
   color: var(--body_color);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 .sec3{
   background-color: var(--body_background);
   color: var(--body_color);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 .sec5{
   background-color: var(--body_background);
@@ -50,7 +54,7 @@
   text-align: center;
   position: absolute;
   z-index: 1;
-  top: 40%;
+  top: 55%;
   right: 70%;
 }
 .videodiv{
@@ -173,10 +177,21 @@
   color: blue;
   cursor: pointer;
 }
+.scrollb{
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  cursor: pointer;
+  color: var(--body_color);
+  z-index: 1000;
+}
+.scrollb:hover{
+  color: rgb(242, 91, 242);
+}
 
 @media screen and (max-width: 900px) {
   .introd{
-    top: 38%;
+    top: 55%;
     right: 0%;
   }
   .mainimg{

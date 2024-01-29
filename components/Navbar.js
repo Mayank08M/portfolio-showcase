@@ -32,10 +32,10 @@ const Navbar = ({ onToggleTheme }) => {
           <input className={styles.inputn} type="checkbox" />
           <span className={styles.menu}> <span class={styles.hamburger}></span> </span>
           <ul className={styles.navitem}>
-            <li> <Link href="/">Home</Link> </li>
-            <li> <Link href="/">About</Link> </li>
-            <li><Link href="/">Blogs</Link></li>
-            <li> <Link href="/">Contact</Link> </li>
+            <li> <a href="#1">Home</a> </li>
+            <li> <a href="#2">About</a> </li>
+            <li><a href="#3">Services</a></li>
+            <li> <a href="#4">Contact</a> </li>
           </ul>
         </label>
       </div>

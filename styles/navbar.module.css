@@ -142,11 +142,10 @@
       text-align: center;
     }
     
-    .label a {
+    .labeln a {
       margin-bottom: 1em;
       display: block;
-      color: #f38630;
+      color: black;
       text-decoration: none;
-      
     }
   }
