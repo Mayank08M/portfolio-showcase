@@ -46,7 +46,7 @@ export default function Home() {
               </div>
             </div>
             <div style={{ margin: "1rem 2rem" }}>
-              <p style={{ fontWeight: "bold", fontSize: "3rem", color: "black" }}>Mayank Mishra</p>
+              <p style={{ fontWeight: "bold", fontSize: "3rem", color: "black" }}>Software Developer</p>
             </div>
           </div>
         </section>
@@ -72,7 +72,7 @@ export default function Home() {
               </div>
               <div style={{ marginTop: "0.5rem" }}>
                 <p style={{ fontWeight: "bold" }}>3. Projects Link Github</p>
-                <p style={{ color: "rgb(167, 167, 167)" }}>github.com/Mayank08M</p>
+                <Link href={"https://github.com/Mayank08M"} target="_blank" style={{ color: "rgb(167, 167, 167)", cursor:"pointer" }}>github.com/Mayank08M</Link>
               </div>
             </div>
           </div>
