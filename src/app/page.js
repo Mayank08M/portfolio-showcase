@@ -167,8 +167,8 @@ export default function Home() {
             <div className={styles.copyrights}>@2024 All copyrights are reserved<br />Made by <strong>Mayank Mishra</strong></div>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <div><Link href={"https://www.instagram.com/mayank__mishra08/"} target="_blank"><FaInstagram style={{ fontSize: "1.5rem" }} className={styles.insta} /></Link></div>
-              <div style={{ marginLeft: "0.5rem", marginRight: "0.5rem" }}><Link href={"https://www.google.com/"} target="_blank"><FaGithub style={{ fontSize: "1.5rem" }} className={styles.github} /></Link></div>
-              <div><FaFacebookSquare style={{ fontSize: "1.5rem" }} className={styles.facebook} /></div>
+              <div style={{ marginLeft: "0.5rem", marginRight: "0.5rem" }}><Link href={"https://github.com/Mayank08M?tab=overview&from=2024-03-01&to=2024-03-11"} target="_blank"><FaGithub style={{ fontSize: "1.5rem" }} className={styles.github} /></Link></div>
+              <div><Link href={"https://www.instagram.com/mayank__mishra08/"} target="_blank"><FaFacebookSquare style={{ fontSize: "1.5rem" }} className={styles.facebook} /></Link></div>
             </div>
           </div>
         </section>
