@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport({
 
 app.use(express.json()); // Middleware to parse JSON bodies
 
-app.post('/', (req, res) => {
+app.post('https://portfolio-work-5uccvhp5i-mayank-mishras-projects-7b6c30ae.vercel.app/', (req, res) => {
     const { name, email, text } = req.body;
     console.log(name, email, text)
     const mailOptions = {
