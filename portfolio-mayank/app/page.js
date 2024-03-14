@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import styles from "../../styles/page.module.css";
+import styles from "../styles/page.module.css";
 import React, { useState } from 'react';
-import Navbar from "../../components/Navbar";
-import Man from '../../public/man.png'
-import Iphone from '../../public/iphone.jpg'
-import Discuss from '../../public/discuss.jpg'
-import Typing from '../../public/typing.jpg'
+import Navbar from "../components/Navbar";
+import Man from '../public/man.png'
+// import Iphone from '../../public/iphone.jpg'
+// import Discuss from '../../public/discuss.jpg'
+// import Typing from '../../public/typing.jpg'
 import { FaInstagram } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
