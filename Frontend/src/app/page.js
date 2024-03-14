@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import styles from "../../styles/page.module.css";
-import { useState } from "react";
+import React, { useState } from 'react';
 import Navbar from "../../components/Navbar";
 import Man from '../../public/man.png'
 import Iphone from '../../public/iphone.jpg'
@@ -16,11 +16,40 @@ import { FaUserCog } from "react-icons/fa";
 import { RiComputerLine } from "react-icons/ri";
 import { AiOutlinePlayCircle } from "react-icons/ai"
 import Link from "next/link";
+import axios from 'axios'; 
 
 export default function Home() {
-    const scrollToTop = () => {
-      window.scrollTo({ top:0, behavior:"smooth"});
-    };
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    text: ''
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post('http://localhost:8000', formData)
+      .then(response => {
+        console.log(response.data);
+        setSubmitted(true);
+        setFormData({ name: '', email: '', text: '' }); // Clear form fields
+        setError(''); // Clear any previous error message
+      })
+      .catch(error => {
+        console.error('Error submitting form:', error);
+        setError('Failed to submit form. Please try again.'); // Display error message
+      });
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const [theme, setTheme] = useState('light'); // 'light' or 'dark'
 
   const toggleTheme = () => {
@@ -72,7 +101,7 @@ export default function Home() {
               </div>
               <div style={{ marginTop: "0.5rem" }}>
                 <p style={{ fontWeight: "bold" }}>3. Projects Link Github</p>
-                <Link href={"https://github.com/Mayank08M"} target="_blank" style={{ color: "rgb(167, 167, 167)", cursor:"pointer" }}>github.com/Mayank08M</Link>
+                <Link href={"https://github.com/Mayank08M"} target="_blank" style={{ color: "rgb(167, 167, 167)", cursor: "pointer" }}>github.com/Mayank08M</Link>
               </div>
             </div>
           </div>
@@ -84,7 +113,7 @@ export default function Home() {
             <div className={styles.griddiv}>
               <div className={styles.card}>
                 <div style={{ padding: "1rem", borderRadius: "10px", background: "rgb(220, 220, 255)", width: "18%", margin: "1rem", height: "4rem" }}>
-                  <MdSettingsApplications style={{ fontSize: "1.8rem", color:"black"  }} />
+                  <MdSettingsApplications style={{ fontSize: "1.8rem", color: "black" }} />
                 </div>
                 <div style={{ padding: "0 2.5rem 0 1rem" }}>
                   <p style={{ marginBottom: "0.5rem" }}>API integration</p>
@@ -93,7 +122,7 @@ export default function Home() {
               </div>
               <div className={styles.card}>
                 <div style={{ padding: "1rem", borderRadius: "10px", background: "rgb(220, 220, 255)", width: "18%", margin: "1rem", height: "4rem" }}>
-                  <FaUserCog style={{ fontSize: "1.8rem", color:"black" }} />
+                  <FaUserCog style={{ fontSize: "1.8rem", color: "black" }} />
                 </div>
                 <div style={{ padding: "0 2.5rem 0 1rem" }}>
                   <p>Frontend UI</p>
@@ -102,7 +131,7 @@ export default function Home() {
               </div>
               <div className={styles.card}>
                 <div style={{ padding: "1rem", borderRadius: "10px", background: "rgb(220, 220, 255)", width: "18%", margin: "1rem", height: "4rem" }}>
-                  <RiComputerLine style={{ fontSize: "1.8rem", color:"black" }} />
+                  <RiComputerLine style={{ fontSize: "1.8rem", color: "black" }} />
                 </div>
                 <div style={{ padding: "0 2.5rem 0 1rem" }}>
                   <p>Single page applications</p>
@@ -120,10 +149,10 @@ export default function Home() {
               <p style={{ fontWeight: "bold", fontStyle: "italic", marginBottom: "1rem" }}>Want to work with me than please feel free to contact by sending the filled form below.</p>
               <p>Phone no. +91 9152726297</p>
               <p>Email ID - mayank0806md@gmail.com</p>
-              <form style={{ marginTop: "2rem" }}>
-                <input name="name" type="text" className={styles.feedbackinput} placeholder="Name" />
-                <input name="email" type="text" className={styles.feedbackinput} placeholder="Email" />
-                <textarea name="text" className={styles.feedbackinput} placeholder="Comment"></textarea>
+              <form style={{ marginTop: "2rem" }} onSubmit={ handleSubmit }>
+                <input name="name" type="text" className={styles.feedbackinput} placeholder="Name" onChange={handleChange}/>
+                <input name="email" type="text" className={styles.feedbackinput} placeholder="Email" onChange={handleChange}/>
+                <textarea name="text" className={styles.feedbackinput} placeholder="Comment" onChange={handleChange}></textarea>
                 <input className={styles.submit} type="submit" value="SUBMIT" />
               </form>
             </div>
@@ -172,7 +201,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className={styles.scrollb} data-theme={theme} onClick={scrollToTop}><FaArrowAltCircleUp style={{fontSize:"2.5rem"}}/></div>
+        <div className={styles.scrollb} data-theme={theme} onClick={scrollToTop}><FaArrowAltCircleUp style={{ fontSize: "2.5rem" }} /></div>
       </div>
     </>
   );
