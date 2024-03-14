@@ -30,7 +30,7 @@ const Navbar = ({ onToggleTheme }) => {
       <div style={{ width: "35%" }}>
         <label className={styles.labeln}>
           <input className={styles.inputn} type="checkbox" />
-          <span className={styles.menu}> <span class={styles.hamburger}></span> </span>
+          <span className={styles.menu}> <span className={styles.hamburger}></span> </span>
           <ul className={styles.navitem}>
             <li> <a href="#1">Home</a> </li>
             <li> <a href="#2">About</a> </li>
@@ -41,7 +41,7 @@ const Navbar = ({ onToggleTheme }) => {
       </div>
       <div>
         <input onChange={handleThemeToggle} type="checkbox" className={styles.checkbox} id="checkbox" />
-        <label for="checkbox" className={styles.checkboxlabel}>
+        <label htmlFor="checkbox" className={styles.checkboxlabel}>
           <IoMoon style={{ color: "#f1c40f" }} />
           <FaSun style={{ color: "#f39c12" }} />
           <span className={styles.ball}></span>
