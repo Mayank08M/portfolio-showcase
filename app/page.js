@@ -61,6 +61,9 @@ export default function Home() {
         <section className={styles.sec1} id="1">
           <Navbar onToggleTheme={toggleTheme} />
           <div className={styles.hmain}>
+            <div style={{ margin: "1rem 2rem" }}>
+              <p style={{ fontWeight: "bold", fontSize: "3rem", color: "black" }}>Software Developer</p>
+            </div>
             <div>
               <div>
                 <div className={styles.introd}>
@@ -73,9 +76,6 @@ export default function Home() {
               <div className={styles.mainimg}>
                 <Image src={Man} alt="man" height={500} />
               </div>
-            </div>
-            <div style={{ margin: "1rem 2rem" }}>
-              <p style={{ fontWeight: "bold", fontSize: "3rem", color: "black" }}>Software Developer</p>
             </div>
           </div>
         </section>
